@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* styles/globals.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Changed from 1 to 0 to push particles behind other elements */
+  }
+  
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 8s infinite ease-in-out;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-20px) translateX(10px);
+    }
+  }
+  
+  .login-container {
+    background: rgba(15, 15, 20, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 400px;
+    z-index: 2; /* Making sure this is higher than particles */
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative; /* Added to ensure z-index works properly */
+  }
+  
+  .logo {
+    margin-bottom: 30px;
+  }
+  
+  .logo h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(128, 0, 255, 0.7);
+  }
+  
+  .logo span {
+    color: #9d4edd;
+  }
+  
+  .login-btn {
+    background: linear-gradient(90deg, #9d4edd, #7b2cbf);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(123, 44, 191, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .login-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(123, 44, 191, 0.6);
+  }
+  
+  .login-btn:active {
+    transform: translateY(0);
+  }
+  
+  .login-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: translateX(-100%);
+  }
+  
+  .login-btn:hover::after {
+    animation: shine 1.5s infinite;
+  }
+  
+  @keyframes shine {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .welcome-text {
+    color: #a8a8b3;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }

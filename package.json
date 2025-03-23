@@ -1,5 +1,5 @@
 {
-  "name": "pratix",
+  "name": "sa",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -17,6 +17,7 @@
     "cors": "^2.8.5",
     "mongodb": "^6.8.0",
     "mongoose": "^8.5.3",
+    "multiparty": "^4.2.3",
     "next": "14.2.5",
     "next-auth": "^4.24.7",
     "nodemailer": "^6.9.14",
